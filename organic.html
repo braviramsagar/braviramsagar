@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Food Traceability</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #28a745;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #e9ecef;
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #28a745;
+            margin-top: 20px;
+        }
+        .card {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Organic Traceability</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#farmer">Farmer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#customer">Customer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Organic Food Traceability System</h1>
+        <p>Ensuring Transparency from Farm to Table Using Blockchain</p>
+    </div>
+
+    <!-- Farmer Section -->
+    <div class="container" id="farmer">
+        <h2 class="section-title">Farmer Section</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Farmer Registration & Login</h5>
+                <p class="card-text">Farmers can register, log in, and add vegetable details.</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#registerModal">Register</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Section -->
+    <div class="container" id="customer">
+        <h2 class="section-title">Customer Section</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Customer Registration & Login</h5>
+                <p class="card-text">Customers can register, log in, authenticate scan, and buy vegetables.</p>
+                <button class="btn btn-success" data-toggle="modal" data-target="#registerModal">Register</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="userType">User Type</label>
+                            <select class="form-control" id="userType" required>
+                                <option value="">Select User Type</option>
+                                <option value="Farmer">Farmer</option>
+                                <option value="Customer">Customer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="emailLogin">Email</label>
+                            <input type="email" class="form-control" id="emailLogin" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordLogin">Password</label>
+                            <input type="password" class="form-control" id="passwordLogin" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4 py-4">
+        <p>&copy; 2024 Organic Food Traceability | Powered by Blockchain Technology</p>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<button type=" " onclick="login1.html"></button>S
+</body>
+</html>
